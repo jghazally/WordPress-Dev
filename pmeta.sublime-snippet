@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<?php echo get_post_meta(${1:post_id}, '${2:meta_key}', true); ?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pmeta</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

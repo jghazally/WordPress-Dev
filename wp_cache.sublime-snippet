@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+\$${1:result} = wp_cache_get( '${2:cache_name}' );
+if ( false === $1 ) {
+	// cache has either expired or does not exist so we need to grab the data
+	// manually store it in the cache
+	\$${1:result} = ${3:cache data};
+	wp_cache_set( '${2:cache_name}', \$${1:result} );
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wp_cache</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+wp_enqueue_script(
+     ${1:handle}
+    ,${2:src}
+    ,${3:deps}
+    ,${4:ver}
+    ,${5:in_footer}
+);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>enqueue_script</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

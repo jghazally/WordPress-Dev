@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+<div class="wrap">
+	<div id="icon-tools" class="icon32"><br></div>
+	<h2>${1:Title}</h2>
+
+	<form action='' method="get">
+		<?php
+		\$${2:list_table} = new \$${3:list_table_class_name}();
+		\$${2:list_table}->prepare_items();
+		\$${2:list_table}->display();
+		?>
+
+		<input type="hidden" name="post_type" class="post_type_page" value="${4:post_type_page}">
+		<input type="hidden" name="page" value="<?php echo \$_REQUEST['page'] ?>" />
+	</form>
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>list_display</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

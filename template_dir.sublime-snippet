@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<?php bloginfo('template_directory'); ?>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>template_dir</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

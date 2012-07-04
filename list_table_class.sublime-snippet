@@ -1,0 +1,83 @@
+<snippet>
+	<content><![CDATA[
+<?php
+/**
+ * @author ${1:jeffry ghazally}
+ */
+class ${2:My_List_Table} extends WP_List_Table {
+
+	/**
+	 * Setup the columns and set the prizes
+	 * @return null
+	 * @author ${1:jeffry ghazally}
+	 */
+	function __construct() {
+		global \$status, \$page;
+
+		parent::__construct( array(
+			'singular' => '${2:my_list_table}',
+			'plural'   => '${2:my_list_table}',
+			'ajax'     => false
+		) );
+
+	}
+
+
+	/**
+	 * Return all default column data
+	 * @param array \$item
+	 * @param string \$column_name name of the column
+	 * @return string
+	 * @author ${1:jeffry ghazally}
+	 */
+	function column_default(\$item, \$column_name) {
+		if ( isset(\$item[\$column_name]) )
+			return \$item[\$column_name];
+	}
+
+	/**
+	 * Provide the columns for the table
+	 * @return array
+	 * @author ${1:jeffry ghazally}
+	 */
+	function get_columns() {
+		\$columns = array(
+		${3:Column Names}
+		);
+		return \$columns;
+	}
+
+	/**
+	 * Prepare the table for output
+	 * @return null
+	 * @author ${1:jeffry ghazally}
+	 */
+	function prepare_items() {
+		\$columns  = \$this->get_columns();
+		\$hidden   = array();
+		\$this->_column_headers = array( \$columns , \$hidden , \$sortable );
+		\$this->items = \$this->get_data();
+
+	}
+
+	/**
+	 * Here we collate and return the data required for listing in the table,
+	 * The data needs to be returned as an associative array with keys being
+	 * the column name and values being the data to be output
+	 * @return array data to be displayed in the table
+	 */
+	function get_data() {
+		global $wpdb;
+		${4}
+
+	}
+
+}
+ ?>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>list_table</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
