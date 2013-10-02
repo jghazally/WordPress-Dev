@@ -4,7 +4,7 @@
 	\$labels = array(
 		'name'              => _x( '${1:taxonomy name}s', 'taxonomy general name' ),
 		'singular_name'     => _x( '${1:taxonomy name}', 'taxonomy singular name' ),
-		'search_items'      =>  __( 'Search ${1:taxonomy name}s' ),
+		'search_items'      => __( 'Search ${1:taxonomy name}s' ),
 		'all_items'         => __( 'All ${1:taxonomy name}s' ),
 		'parent_item'       => __( 'Parent ${1:taxonomy name}' ),
 		'parent_item_colon' => __( 'Parent ${1:taxonomy name}:' ),
