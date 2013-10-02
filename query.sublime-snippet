@@ -2,17 +2,16 @@
 	<content><![CDATA[
 <?php
 \$args = array(
-	'post_type' =>  ${1:post_type},
+	'post_type' => '${1:post_type}',
  );
 \$${2:query_name} = new WP_Query( \$args );
 ?>
 
-<?php if(\$${2:query_name}->have_posts()) : ?><?php while(\$${2:query_name}->have_posts()) :
-\$${2:query_name}->the_post(); ?>
-
-	<?php the_content(); ?>
-
-<?php endwhile; endif; ?>
+<?php if ( \$${2:query_name}->have_posts() ) : ?>
+	<?php while ( \$${2:query_name}->have_posts() ) : \$${2:query_name}->the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+<?php endif; ?>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>wpquery</tabTrigger>
