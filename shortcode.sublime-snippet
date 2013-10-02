@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+function ${1:function name}( $atts ) {
+	extract( shortcode_atts( array(
+		'${2:attribute}' => '${3:value}'
+	), $atts ) );
+
+	return '${4:what to return}';
+}
+add_shortcode( '${5:shortcode name}', '${1:function name}' );
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>shortcode</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
